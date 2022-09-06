@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./crud.js" defer></script>
+    <link rel="stylesheet" href="./crud.css" />
+    <title>CRUD App</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend><h2>TIIDELAB FORM</h2></legend>
+      <form id="form" onsubmit="onFormSubmit()">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+        />
+        <br />
+        <br />
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter your Email"
+        />
+        <br />
+        <br />
+        <label for="track">Track</label>
+        <select name="track" id="track">
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="DevOps">DevOps</option>
+          <option value="Design">Design</option>
+          <option value="Fullstack">Fullstack</option>
+          <option value="Others">Others</option>
+        </select>
+        <br />
+        <br />
+        <label for="group">Group Name</label>
+        <select name="group" id="group">
+          <option value="AlphaDevs">AlphaDevs</option>
+          <option value="Pacesetters">Pacesetters</option>
+          <option value="Hobbes">Hobbes</option>
+          <option value="Data-Pirates">Data-Pirates</option>
+          <option value="Techstars">Techstars</option>
+          <option value="Others">Others</option>
+        </select>
+        <br />
+        <br />
+        <label for="team-lead">Team Lead?</label>
+        <select name="isTeamLead" id="isTeamLead">
+          <option value="Teamlead">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <br />
+        <br />
+        <label for="suspend">Suspended?</label>
+        <select name="isSuspended" id="isSuspended">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <br />
+        <br />
+        <label for="expel">Expelled?</label>
+        <select name="isExpelled" id="isExpelled">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <br />
+        <br />
+        <div class="buttons">
+          <input type="button" id="btn" value="Submit" onclick="Submit()" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </fieldset>
+    <br />
+    <br />
+    <div id="msg"></div>
+    <br />
+    <br />
+
+    <!-- TABLE TO RECEIVE DATA -->
+    <fieldset>
+      <legend><h2>Data from Local Storage</h2></legend>
+      <table border="1" id="table" style="text-align: center">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Track</th>
+            <th>Group</th>
+            <th>TeamLead?</th>
+            <th>Suspended?</th>
+            <th>Expelled?</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- UPDATED VIA JAVASCRIPT -->
+        </tbody>
+      </table>
+    </fieldset>
+  </body>
+</html>
